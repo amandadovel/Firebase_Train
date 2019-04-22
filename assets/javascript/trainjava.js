@@ -67,6 +67,51 @@ database.ref().on("child_added", function (childSnapshot) {
     console.log(trainDestination);
     console.log(firstTrainTime);
     console.log(trainFrequency);
-})
+
+
+    // First time pushed back 1 year to make sure it comes before current time
+    var firstTrainTimeConverted = moment(firstTrainTime, "HH:MM").subtract(1, "years");
+    console.log(firstTrainTimeConverted);
+
+
+    // Variable for current time
+    var currentTime = moment();
+    console.log("CURRENT TIME: " + moment(currentTime).format("HH:MM"));
+
+    // Difference between the times
+    var diffTime = moment().diff(moment(firstTrainTimeConverted), "minutes");
+    console.log("DIFFERENCE IN TIME: " + diffTime);
+
+    // Time apart (remainder);
+    var tRemainder = currentTime % trainFrequency;
+    console.log(tRemainder);
+
+    // Minutes until train arrives
+    var nextArrival = trainFrequency - tRemainder;
+    console.log("MINUTES TILL TRAIN: " + nextArrival)
+
+    // Next Train
+    var minutesAway = moment().add(nextArrival, "minutes");
+    console.log("ARRIVAL TIME: " + moment(minutesAway).format("HH:MM"));
+
+
+    // Create new row in HTML
+    var newRow = $("<tr>").append(
+        $("<td>").text(trainName),
+        $("<td>").text(trainDestination),
+        $("<td>").text(trainFrequency),
+        $("<td>").text(nextArrival),
+        $("<td>").text(minutesAway),
+    );
+
+    // Append the new row to the table
+    $("#train-table > tbody").append(newRow);
+
+
+
+
+
+
+});
 
 
