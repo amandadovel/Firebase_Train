@@ -1,0 +1,47 @@
+body {
+    background: url(../images/gratefuldead.jpg);
+}
+
+
+form {
+    background-color: white;
+    padding: 30px;
+    margin-top: -20px;
+    margin-bottom: 150px;
+}
+
+h2 {
+    padding: 20px;
+    margin-bottom: -10px;
+}
+
+#train-table {
+    background-color: white;
+    margin-top: 30px;
+}
+
+tr:hover {
+    background-color: #e61f74;
+    color: white;
+}
+
+h3 {
+    padding: 20px;
+}
+
+.thead-dark th {
+    color: white !important;
+    background-color: black !important;
+    border: none !important;
+}
+
+.btn-primary {
+    color: white;
+    background-color: black !important;
+    border: none !important;
+    margin-top: 20px;
+
+}
+
+
+

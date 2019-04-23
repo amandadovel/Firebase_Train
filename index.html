@@ -14,6 +14,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:900" rel="stylesheet">
+
     <!-- Firebase Reference -->
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
 
@@ -25,73 +28,72 @@
 
 <body>
     <!-- Jumbotron -->
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid"
+            style="background-color: black; color: white; font-family: 'Orbitron', sans-serif;">
             <h1 class="text-center">Train Schedule</h1>
-            <p class="lead">Ridin that train... </p>
+            <p class="lead; text-center">Ridin that train... </p>
         </div>
-    </div>
 
-    <!-- Current train schedule -->
-    <table class="table" id="train-table">
-        <thead class="thead-dark">
-            <div class="col-md-12">
+        <!-- Current train schedule -->
+        <table class="table" id="train-table">
+
+            <div class="col-md-12"
+                style="font-family: 'Orbitron', sans-serif; text-align: center; background-color: white">
                 <h2>Current Train Schedule</h2>
             </div>
-            <tr>
-                <th scope="col">Train Name</th>
-                <th scope="col">Destination</th>
-                <th scope="col">Frequency(min)</th>
-                <th scope="col">Next Arrival</th>
-                <th scope="col">Minutes Away</th>
-            </tr>
-        </thead>
+            <thead class="thead-dark">
+                <tr>
+                    <div class="col-md-3" style="color: white; background-color: black">
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency(min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                    </div>
+                </tr>
+            </thead>
+            <!-- Rows where train schedule will go -->
+            <tbody>
 
-        <!-- Rows where train schedule will go -->
-        <tbody>
-            <tr>
-                <th scope="row"></th>
-                <td></td>
-            </tr>
-        </tbody>
+            </tbody>
+
+        </table>
         <!-- Add a train -->
         <thead class="thead-dark">
-            <tr>
-                <th scope="col">Add Train</th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-            </tr>
+            <div class="col-md-12"
+                style="font-family: 'Orbitron', sans-serif; text-align: center; color:white; background-color: black; text-align: center">
+                <h3>Add Train</h3>
+            </div>
         </thead>
-    </table>
+        <!-- Entry form for adding a train -->
+        <form>
 
-    <!-- Entry form for adding a train -->
-    <form>
-        <div class="form-group">
-            <label for="train-name-input">Train Name</label>
-            <input type="trainName" class="form-control" id="train-name-input" aria-describedby="trainName">
-        </div>
-        <div class="form-group">
-            <label for="destination-input">Destination</label>
-            <input type="desination" class="form-control" id="destination-input">
-        </div>
-        <div class="form-group">
-            <label for="first-train-input">First Train Time (HH:MM, Military time)</label>
-            <input type="FirstTrain" class="form-control" id="first-train-input">
-        </div>
-        <div class="form-group">
-            <label for="frequency-input">Frequency (min)</label>
-            <input type="Frequency" class="form-control" id="frequency-input">
-            <button type="submit" class="btn btn-primary" id="add-train-btn">Submit</button>
-    </form>
-
+            <div class="form-group">
+                <label for="train-name-input">Train Name</label>
+                <input type="trainName" class="form-control" id="train-name-input" aria-describedby="trainName">
+            </div>
+            <div class="form-group">
+                <label for="destination-input">Destination</label>
+                <input type="desination" class="form-control" id="destination-input">
+            </div>
+            <div class="form-group">
+                <label for="first-train-input">First Train Time (HH:MM)</label>
+                <input type="FirstTrain" class="form-control" id="first-train-input">
+            </div>
+            <div class="form-group">
+                <label for="frequency-input">Frequency (min)</label>
+                <input type="Frequency" class="form-control" id="frequency-input">
+                <button type="submit" class="btn btn-primary" id="add-train-btn">Submit</button>
+        </form>
 
 
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Javascript -->
-    <script type="text/javascript" src="assets/javascript/trainjava.js"></script>
+
+        <!-- jQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Javascript -->
+        <script type="text/javascript" src="assets/javascript/trainjava.js"></script>
+    </div>
 </body>
 
 </html>
